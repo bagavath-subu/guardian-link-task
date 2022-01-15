@@ -71,12 +71,12 @@ function Dashboard() {
         >
           {loading
             ? Array.from(Array(2)).map((_, index) => (
-                <Grid item xs={2} sm={4} md={4} key={index}>
+                <Grid item xs={4} sm={4} md={4} key={index}>
                   <Skeleton variant="rectangular" width={"100%"} height={200} />
                 </Grid>
               ))
             : CARD_DATA.map(({ title, id, actionHandler }, index) => (
-                <Grid item xs={2} sm={4} md={4} key={index}>
+                <Grid item xs={4} sm={4} md={4} key={index}>
                   <BasicCard
                     title={title}
                     body={cardData?.[id] || "0"}

@@ -50,7 +50,7 @@ function SearchBar({ title = "q", actionHandler = () => {}, actionName = "" }) {
 
   return (
     <Grid container justifyContent="space-between" spacing={{ xs: 2, md: 3 }}>
-      <Grid item xs={2} sm={4} md={4}>
+      <Grid item md={4} xs={6}>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -65,7 +65,7 @@ function SearchBar({ title = "q", actionHandler = () => {}, actionName = "" }) {
           />
         </Search>
       </Grid>
-      <Grid item>
+      <Grid item md={2} xs={6}>
         <Button
           onClick={actionHandler}
           variant="contained"

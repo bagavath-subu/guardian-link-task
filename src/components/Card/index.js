@@ -12,7 +12,7 @@ export default function BasicCard({
   actionHandler = () => {},
 }) {
   return (
-    <Card sx={{ minWidth: 200 }}>
+    <Card sx={{ minWidth: 100 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {title}
