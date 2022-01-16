@@ -5,7 +5,7 @@ const initialState = { loading: false, data: [] };
 
 export const getTodosAPI = createAsyncThunk(
   "getTodos",
-  async (userId, params) => {
+  async ({ userId, params }) => {
     const response = await getTodosByUser(userId, params);
     // The value we return becomes the `fulfilled` action payload
     return response;

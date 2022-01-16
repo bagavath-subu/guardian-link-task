@@ -57,7 +57,7 @@ function TodoListing() {
     const params = { title: search.get("title"), page: page + 1 };
     reset();
 
-    return dispatch(getTodosAPI(urlParams?.userId, params));
+    return dispatch(getTodosAPI({ userId: urlParams?.userId, params }));
   };
 
   const handleToggle = (id, isCompleted) => {

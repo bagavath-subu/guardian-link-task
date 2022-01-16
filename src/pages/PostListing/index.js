@@ -77,15 +77,14 @@ function PostListing() {
   useEffect(() => {
     if (expanded !== null) {
       const postId = listData?.data?.[expanded]?.id;
-      dispatch(getCommentsAPI(postId));
+      return dispatch(getCommentsAPI(postId));
     }
   }, [expanded]);
 
   const loadData = () => {
     const params = { title: search.get("title"), page: page + 1 };
     reset();
-
-    return dispatch(getPostsAPI(urlParams?.userId, params));
+    return dispatch(getPostsAPI({ userId: urlParams?.userId, params }));
   };
 
   const handleDelete = (id) => {
